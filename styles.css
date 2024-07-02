@@ -1,0 +1,27 @@
+/* Custom styles for the Expense Tracker */
+body {
+  background-color: #c5ddef; /* Light grey background */
+  padding-top: 20px;
+}
+
+.tab-content {
+  background-color: #c1d3d9; /* White background for content */
+  border: 1px solid #dee2e6;
+  border-top: none;
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+}
+
+.nav-tabs {
+  margin-bottom: 20px;
+}
+
+.list-group-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-sm {
+  margin-left: 10px;
+}

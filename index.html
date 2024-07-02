@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title >Expense Tracker</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Expense Tracker</h1>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab">Home</a>
+      <a class="nav-item nav-link" id="nav-add-tab" data-toggle="tab" href="#nav-add" role="tab">Add Expense</a>
+      <a class="nav-item nav-link" id="nav-filter-tab" data-toggle="tab" href="#nav-filter" role="tab">Filter/Search</a>
+      <a class="nav-item nav-link" id="nav-report-tab" data-toggle="tab" href="#nav-report" role="tab">Monthly Report</a>
+      <a class="nav-item nav-link" id="nav-income-tab" data-toggle="tab" href="#nav-income" role="tab">Income</a>
+    </div>
+    <div class="tab-content" id="nav-tabContent">
+      <!-- Home Tab -->
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel">
+        <h2 class="mt-4">Recent Expenses</h2>
+        <ul id="expense-list" class="list-group"></ul>
+        <h3 id="balance-display" class="mt-4"></h3>
+      </div>
+      <!-- Add Expense Tab -->
+      <div class="tab-pane fade" id="nav-add" role="tabpanel">
+        <h2 class="mt-4">Add Expense</h2>
+        <form id="expense-form">
+          <div class="form-group">
+            <label for="expense-description">Description</label>
+            <input type="text" class="form-control" id="expense-description" required>
+          </div>
+          <div class="form-group">
+            <label for="expense-amount">Amount</label>
+            <input type="number" class="form-control" id="expense-amount" required>
+          </div>
+          <div class="form-group">
+            <label for="expense-date">Date</label>
+            <input type="date" class="form-control" id="expense-date" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Expense</button>
+        </form>
+      </div>
+      <!-- Filter/Search Tab -->
+      <div class="tab-pane fade" id="nav-filter" role="tabpanel">
+        <h2 class="mt-4">Filter/Search Expenses</h2>
+        <form id="filter-form">
+          <div class="form-group">
+            <label for="filter-description">Description</label>
+            <input type="text" class="form-control" id="filter-description">
+          </div>
+          <div class="form-group">
+            <label for="filter-date">Date</label>
+            <input type="month" class="form-control" id="filter-date">
+          </div>
+          <button type="submit" class="btn btn-primary">Filter</button>
+        </form>
+        <h2 class="mt-4">Filtered Expenses</h2>
+        <ul id="filter-list" class="list-group"></ul>
+      </div>
+      <!-- Monthly Report Tab -->
+      <div class="tab-pane fade" id="nav-report" role="tabpanel">
+        <h2 class="mt-4">Generate Monthly Report</h2>
+        <form id="report-form">
+          <div class="form-group">
+            <label for="report-month">Month</label>
+            <input type="month" class="form-control" id="report-month" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Generate Report</button>
+        </form>
+        <div id="report-output" class="mt-4"></div>
+      </div>
+      <!-- Income Tab -->
+      <div class="tab-pane fade" id="nav-income" role="tabpanel">
+        <h2 class="mt-4">Manage Income</h2>
+        <form id="income-form">
+          <div class="form-group">
+            <label for="income-amount">Enter Monthly Income</label>
+            <input type="number" class="form-control" id="income-amount" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Set Income</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
